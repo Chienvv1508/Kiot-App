@@ -1,0 +1,54 @@
+﻿<Window x:Class="ProjectInstaArt.UI.ManagerUI.ProductUI.CategoryManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectInstaArt.UI.ManagerUI.ProductUI"
+        mc:Ignorable="d"
+        Title="CategoryManagement" Height="450" Width="800"
+        
+        >
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <StackPanel Margin="15">
+                <TextBlock Text="Quản Lý Loại Sản Phẩm" FontSize="30" Foreground="Blue" HorizontalAlignment="Center" />
+                <StackPanel x:Name="stForm" Margin="0,30,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Mã Loại Hàng:" Width="100" />
+                        <TextBox x:Name="txtCategoryId" Margin="10,0,0,0" Width="300"
+           Text="{Binding Path=CategoryId, Mode=OneWay}"
+           DataContext="{Binding ElementName=lvCategory, Path=SelectedItem}" 
+                          IsEnabled="False"
+           />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <Label Content="Tên Loại Hàng:" Width="100" />
+                        <TextBox x:Name="txtCategory" Margin="10,0,0,0" Width="300"
+                          Text="{Binding Path=CategoryName, Mode=OneWay}"
+                          DataContext="{Binding ElementName=lvCategory, Path=SelectedItem}" TextChanged="txtCategory_TextChanged_2"
+                          />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                    <Button Content="Thêm Đơn Vị" Width="150" Name="btnAdd" Click="btnAdd_Click" />
+                    <Button Content="Sửa" Width="150" Margin="30,0,30,0" Name="btnUpdate" Click="btnUpdate_Click"/>
+                    <Button Content="Xóa" Width="150" Name="btnDelete" Click="btnDelete_Click" />
+
+                </StackPanel>
+                <ListView x:Name="lvCategory" Margin="0,30,0,0" Width="500" HorizontalAlignment="Left" SelectionChanged="lvCategory_SelectionChanged" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mã Loại Hàng" Width="200" DisplayMemberBinding="{Binding Path=CategoryId}"/>
+                            <GridViewColumn Header="Tên Loại Hàng" Width="300" DisplayMemberBinding="{Binding Path=CategoryName}"/>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+   
+</Window>

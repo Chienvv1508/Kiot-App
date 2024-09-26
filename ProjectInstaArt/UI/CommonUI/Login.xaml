@@ -1,0 +1,38 @@
+﻿<Window x:Class="ProjectInstaArt.UI.CommonUI.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectInstaArt.UI.CommonUI"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+Title="Login" Height="300" Width="500">
+    <Grid Margin="0,50,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="ĐĂNG NHẬP" FontWeight="Bold" Foreground="Blue" Grid.ColumnSpan="2" HorizontalAlignment="Center" />
+        <Label Content="Tài Khoản: " Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Margin="5"/>
+        <Label Content="Mật Khẩu: " Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox Name="txtUserName" Grid.Column="1" Grid.Row="1" Width="300" HorizontalAlignment="Left" Margin="5"/>
+        <PasswordBox Name="txtPassWord" Grid.Column="1" Grid.Row="2" Width="300" HorizontalAlignment="Left" Margin="5" />
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button Content="Đăng Nhập" Height="30" Width="100" VerticalAlignment="Top" Margin="80,15,10,0" Name="btnLogin" Click="btnLogin_Click" />
+            <Button Content="Đăng Ký" Height="30" Width="100" VerticalAlignment="Top" Margin="5,15,15,15"/>
+            <Button Content="Quên Mật Khẩu" Height="30" Width="100" VerticalAlignment="Top" Margin="5,15,15,15"/>
+
+
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>

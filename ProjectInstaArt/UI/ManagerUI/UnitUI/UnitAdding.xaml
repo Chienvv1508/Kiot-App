@@ -1,0 +1,48 @@
+﻿<Window x:Class="ProjectInstaArt.UI.ManagerUI.UnitUI.UnitAdding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectInstaArt.UI.ManagerUI.UnitUI"
+        mc:Ignorable="d"
+        Title="UnitAdding" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Quản Lý Đơn Vị" HorizontalAlignment="Center" FontSize="30" Foreground="Blue"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Tên Đơn Vị:" />
+                <TextBox x:Name="txtUnitName" Width="200" Margin="40,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Đơn Vị Cơ Bản:" />
+                <TextBox x:Name="txtBaseUnit" Width="200" Margin="20,0,0,0"  IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Số lượng quy đổi:" />
+                <TextBox x:Name="txtQuantity" Width="200" Margin="20,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Đơn Vị Cơ Bản:" />
+                <CheckBox IsChecked="False" VerticalAlignment="Center"  Margin="20,0,0,0" Name="chkBaseUnit" Checked="chkBaseUnit_Checked"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                
+                <Button x:Name="btnSave" Content="Lưu Lại" Width="100" HorizontalAlignment="Left"  Click="btnSave_Click" />
+                <Button Content="Thay Đổi" Width="100" Margin="30,0,30,0"/>
+                <Button Content="Xóa" Width="100"/>
+            </StackPanel>
+            <ListView Margin="0,20,0,0" Width="650" Name="lvUnitList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Tên đơn vị" Width="200" DisplayMemberBinding="{Binding Path=UnitName}" />
+                        <GridViewColumn Header="Đơn vị cơ sở" Width="200" DisplayMemberBinding="{Binding Path= BaseUnit}"/>
+                        <GridViewColumn Header="Số lượng quy đổi" Width="200" DisplayMemberBinding="{Binding Path=Quantity}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        
+
+
+    </Grid>
+</Window>

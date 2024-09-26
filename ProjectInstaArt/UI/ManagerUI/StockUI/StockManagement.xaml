@@ -1,0 +1,45 @@
+﻿<Window x:Class="ProjectInstaArt.UI.ManagerUI.StockUI.StockManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectInstaArt.UI.ManagerUI.StockUI"
+        mc:Ignorable="d"
+        Title="StockManagement" Height="450" Width="1000">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Quản Lý Kho" FontSize="30" Foreground="Blue" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                <Label Content="Tên/Mã sản phẩm: "/>
+                <TextBox x:Name="txtSearch" Margin="20,0,0,0" Width="250"/>
+            </StackPanel>
+            <CheckBox Content="Sắp hết hạn" Margin="0,20,0,0" Name="ckIsExpiringSoon"/>
+            <Button x:Name="btnSearch" Width="100" Content="Tìm Kiếm" HorizontalAlignment="Left" Margin="0,20,0,0" Click="btnSearch_Click_1"/>
+            
+            <ListView x:Name="lvStock" Margin="0,30,0,0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Mã Sản Phẩm" Width="100" DisplayMemberBinding="{Binding Path= Item1.ProductCode}" />
+                        <GridViewColumn Header="Tên Sản Phẩm" Width="100" DisplayMemberBinding="{Binding Path= Item1.ProductCodeNavigation.ProductName}"/>
+                        <GridViewColumn Header="Mã Nhập Hàng" Width="150" DisplayMemberBinding="{Binding Path= Item1.ImportDetailId}"/>
+                        <GridViewColumn Header="Số Lượng" Width="100" DisplayMemberBinding="{Binding Path= Item1.Quantity}"/>
+                        <GridViewColumn Header="Đơn Vị" Width="100" DisplayMemberBinding="{Binding Path= Item1.Unit.UnitName}"/>
+                        <GridViewColumn Header="Sắp Hết Hạn" Width="70" DisplayMemberBinding="{Binding Path= Item2}"/>
+                        <GridViewColumn Header="Điều chỉnh" Width="250">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="btnPrice" Content="Điều Chỉnh Giá" Click="btnPrice_Click" Width="70"/>
+                                        <Button x:Name="btnShelves" Content="Đưa Lên Kệ" Click="btnShelves_Click" Width="70"/>
+                                        <Button x:Name="btnTear" Content="Xé Hàng" Click="btnTear_Click" Width="70" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+    </Grid>
+</Window>

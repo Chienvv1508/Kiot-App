@@ -1,0 +1,27 @@
+﻿<Window x:Class="ProjectInstaArt.UI.CommonUI.InformationForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectInstaArt.UI.CommonUI"
+        mc:Ignorable="d"
+        Title="InformationForm" Height="350" Width="600" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel  Margin="10,10,10,0">
+            <Label Content="Thông Tin Cá Nhân" Foreground="Aqua" 
+            HorizontalAlignment="Center" FontSize="20"/>
+            <StackPanel  Margin="10,30,10,0" Width="400" HorizontalAlignment="Left" >
+                <Label Content="Họ: " />
+                <TextBox Name="txtLastName"/>
+                <Label Content="Tên: " Margin="0,5,0,0" />
+                <TextBox Name="txtFirstName"/>
+                <Label Content="Số Điện Thoại: " Margin="0,5,0,0" />
+                <TextBox Name="txtPhone"/>
+                <Label Content="Địa Chỉ: " Margin="0,5,0,0" />
+                <TextBox Name="txtAdrress"/>
+            </StackPanel>
+           
+        </StackPanel>
+
+    </Grid>
+</Window>

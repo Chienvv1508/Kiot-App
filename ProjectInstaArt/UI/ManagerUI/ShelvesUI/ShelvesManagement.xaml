@@ -1,0 +1,48 @@
+﻿<Window x:Class="ProjectInstaArt.UI.ManagerUI.ShelvesUI.ShelvesManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectInstaArt.UI.ManagerUI.ShelvesUI"
+        mc:Ignorable="d"
+        Title="ShelvesManagement" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Kệ Hàng" FontSize="30" Foreground="Blue" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                <Label Content="Mã Sản Phẩm" Width="100"/>
+                <TextBox x:Name="txtProductCode" Margin="20,0,0,0" Width="250" IsEnabled="False"/>
+                
+            </StackPanel>
+           
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Mã Lần Nhập" Width="100"/>
+                <TextBox x:Name="txtImportDetailId" Margin="20,0,0,0" Width="250" IsEnabled="False" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Đơn Vị" Width="100"/>
+                <TextBlock x:Name="txtUnit"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Số Lượng" Width="100"/>
+                <TextBox x:Name="txtQuantity" Margin="20,0,0,0" Width="250"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button Name="btnAdd" Content="Thêm Hàng Lên Kệ" Click="btnAdd_Click"/>
+            </StackPanel>
+
+            <ListView x:Name="lvShelves" Margin="0,30,0,0" Width="600">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Mã Sản Phẩm" Width="100" DisplayMemberBinding="{Binding Path= ProductCode}" />
+                        <GridViewColumn Header="Tên Sản Phẩm" Width="100" DisplayMemberBinding="{Binding Path=ProductCodeNavigation.ProductName}"/>
+                        <GridViewColumn Header="Mã Nhập Hàng" Width="150" DisplayMemberBinding="{Binding Path= ImportDetailId}"/>
+                        <GridViewColumn Header="Số Lượng" Width="100" DisplayMemberBinding="{Binding Path= Quantity}"/>
+                        <GridViewColumn Header="Đơn Vị" Width="100" DisplayMemberBinding="{Binding Path= Unit.UnitName}"/>
+                        
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>

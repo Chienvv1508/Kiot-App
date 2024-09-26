@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="UI\CommonUI\ChangePassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\CommonUI\InformationChanging.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\CommonUI\InformationForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\CommonUI\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ImportDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ImportUI\ImportDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ImportUI\ImportDetailManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ImportUI\ImportStatistic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ImportUI\ImportUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ManagerHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\PriceUI\PriceSettingManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ProductUI\AddProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ProductUI\CategoryManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ProductUI\UnitAdding.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\RevenueStatistic\RevenueStatistics.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\SaleUI\OrderSearchUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\SaleUI\SaleHomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\SaleUI\ViewOrderDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\ShelvesUI\ShelvesManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\StockUI\StockManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\StockUI\TearUnit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\UnitUI\UnitAdding.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ManagerUI\UserControl1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\CommonUI\ChangePassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\CommonUI\InformationChanging.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\CommonUI\InformationForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\CommonUI\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ImportDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ImportUI\ImportDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ImportUI\ImportDetailManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ImportUI\ImportStatistic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ImportUI\ImportUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ManagerHomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\PriceUI\PriceSettingManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ProductUI\AddProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ProductUI\CategoryManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ProductUI\UnitAdding.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\RevenueStatistic\RevenueStatistics.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\SaleUI\OrderSearchUI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\SaleUI\SaleHomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\SaleUI\ViewOrderDetail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\ShelvesUI\ShelvesManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\StockUI\StockManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\StockUI\TearUnit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\UnitUI\UnitAdding.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ManagerUI\UserControl1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
